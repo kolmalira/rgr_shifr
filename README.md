@@ -3,7 +3,6 @@
 =======
 # Encryption Algorithm RGR
 
-Учебный проект на C++ для шифрования и дешифрования текста и файлов через динамически подключаемые библиотеки.
 
 ## Подключенные алгоритмы
 
@@ -13,27 +12,7 @@
 
 AES-128 добавлен как отдельная динамическая библиотека `aes_cipher` в папке `plugins/aes`.
 
-## Сборка в VS Code / PowerShell
-
-Откройте папку проекта, где лежит `CMakeLists.txt`, затем выполните:
-
-```powershell
-chcp 65001
-Remove-Item -Recurse -Force build -ErrorAction SilentlyContinue
-cmake -S . -B build
-cmake --build build --config Debug
-.\build\bin\Debug\EncryptionAlgorithmRGR.exe
-```
-
-## Где лежат библиотеки
-
-После сборки CMake автоматически копирует DLL/SO/DYLIB в папку рядом с исполняемым файлом:
-
-```text
-build/bin/Debug/plugins/
-```
-
-или на Linux:
+на Linux:
 
 ```text
 build/bin/plugins/
@@ -63,19 +42,3 @@ build/bin/plugins/
 
 Можно сгенерировать ключ через пункт меню `3. Генератор ключей`.
 
-## Работа с файлами
-
-Файлы для проверки удобно класть в папку:
-
-```text
-test_files
-```
-
-Пример пути:
-
-```text
-test_files\input.txt
-```
-
-При дешифровании нужно указывать путь к уже зашифрованному файлу, а не к оригиналу.
->>>>>>> 798799e (Base project (all files))
